@@ -13,8 +13,11 @@ public class DataConnect {
 		PreparedStatement ps=con.prepareStatement(sql);
 	
 		ps.setString(1, reciever);
+		
 		ps.setInt(2, amount);
+		
 		ps.setInt(3,balance);
+		
 		ps.executeUpdate();
 		}
 		catch (Exception e)
