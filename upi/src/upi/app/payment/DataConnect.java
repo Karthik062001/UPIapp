@@ -9,7 +9,7 @@ public class DataConnect {
 	{
 		try {
 		Connection con=DatabaseConnection.getConection();
-		String sql="insert into payment(reciever_name,Amount_sent,balance) values(?,?,?)";
+		String sql=QueryLoad.getProperty("insertProperties");
 		PreparedStatement ps=con.prepareStatement(sql);
 	
 		ps.setString(1, reciever);
@@ -30,12 +30,13 @@ public class DataConnect {
 	{
 		try {
 			Connection con=DatabaseConnection.getConection();
+			String sql1=QueryLoad.getProperty("getPaymentHistory");
 			Statement smt=con.createStatement();
-			ResultSet rs=smt.executeQuery("select * from payment");
+			ResultSet rs=smt.executeQuery(sql1);
 			
 			while(rs.next())
 			{
-				System.out.println("Id : "+rs.getInt("id")+",Reciever name :  "+rs.getString("reciever_name")+",Amount sent : "+rs.getInt("Amount_sent")+",Balance : "+rs.getInt("balance"));
+				System.out.println("Id : "+rs.getInt("id")+",   Reciever name : "+rs.getString("reciever_name")+",   Amount sent : "+rs.getInt("Amount_sent")+",   Balance : "+rs.getInt("balance"));
 			}
 			
 		}
