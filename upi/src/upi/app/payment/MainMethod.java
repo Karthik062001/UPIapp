@@ -14,6 +14,10 @@ public class MainMethod {
 		System.out.println("Enter name you want to send amount");
 		String name=sc.next();
 		
+		 if (!name.matches("[a-zA-Z]+")) {
+	            System.out.println(" Invalid name. Only letters are allowed.");
+	            return;
+		 }
 		System.out.println("Enter the amount you want to send");
 		int a=sc.nextInt();
 	
