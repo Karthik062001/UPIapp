@@ -12,5 +12,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/karth/Downloads/org.json-1.6-20240205.jar" sourcepath="C:/Users/karth/Downloads/org.json-1.6-20240205.jar"/>
+	<classpathentry kind="lib" path="C:/Users/karth/Downloads/jackson-databind-2.18.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/karth/Downloads/jackson-core-2.18.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/karth/Downloads/jackson-annotations-2.18.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
