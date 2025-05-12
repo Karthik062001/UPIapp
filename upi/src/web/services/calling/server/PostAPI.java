@@ -43,7 +43,7 @@ public class PostAPI {
 //        response.put("request", Arrays.asList(request1, request2));
 		List<Object> list3=Arrays.asList(request1, request2);
 		RequestWrapper responseWrap3 = new RequestWrapper(list3);
-//		System.out.println(mapper.writeValueAsString(responseWrap3));
+	System.out.println(mapper.writeValueAsString(responseWrap3));
 		String jsonvalue = mapper.writeValueAsString(responseWrap3);
 	 
 		HttpRequest request = HttpRequest.newBuilder().POST(BodyPublishers.ofString(jsonvalue.toString()))

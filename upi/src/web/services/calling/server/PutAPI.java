@@ -17,7 +17,7 @@ public class PutAPI {
 	
 	String url="https://reqres.in/api/users/2";
 	
-	Input np=new Input("morpheus","zion resident");
+	JobRequest np=new JobRequest("morpheus","zion resident");
 	
 	ObjectMapper map= new ObjectMapper();
 	try {
